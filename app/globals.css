@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f6f1e8;
+  color: #22211d;
+}
+
+::selection {
+  background: #164b37;
+  color: #f6f1e8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+textarea,
+input,
+select {
+  font: inherit;
+}
+
+.section-pad {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+}
+
+.eyebrow {
+  color: #164b37;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: #164b37;
+}
