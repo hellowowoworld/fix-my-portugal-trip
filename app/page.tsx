@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CtaLink } from "@/components/cta-link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -25,7 +26,7 @@ const problemItems = [
   ],
   [
     "Generic lists with no route logic",
-    "Ten good ideas can still make one bad day if they fight the map, the heat, and opening hours."
+    "Ten good ideas can still make one bad day if they fight the map, the heat, restaurant hours, and opening hours."
   ]
 ];
 
@@ -63,6 +64,10 @@ const faqs = [
     a: "No. It works especially well for second trips too, because repeat visitors often need better route logic, not another top-10 list."
   },
   {
+    q: "Do I need to be Canadian or American?",
+    a: "No. The service is for anyone planning Portugal independently. The North American angle just reflects the assumptions I am especially good at catching."
+  },
+  {
     q: "Can you help if flights or hotels are already booked?",
     a: "Yes. I will work around fixed pieces and flag what is still worth changing."
   },
@@ -94,7 +99,7 @@ export default function Home() {
               Planning Portugal? I&apos;ll fix the itinerary before it wastes your trip.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted sm:text-xl">
-              For Canadians and Americans who already have a draft route. Pay €59,
+              For independent travelers who already have a draft route. Pay €59,
               send the messy plan, and get a day-by-day critique plus a cleaner
               version within 3 business days.
             </p>
@@ -114,7 +119,7 @@ export default function Home() {
             <p className="eyebrow">For draft trips, not blank pages</p>
             <div className="mt-5 space-y-4">
               {[
-                ["Who it is for", "North Americans with flights, dates, rough stops, or a half-built Google Doc."],
+                ["Who it is for", "Travelers with flights, dates, rough stops, or a half-built Google Doc."],
                 ["What you get", "A written itinerary repair: what fails, what to cut, what to move, and a better version."],
                 ["What it is not", "Full-service travel planning, booking support, or a glossy list of places everyone already found."]
               ].map(([title, body]) => (
@@ -180,24 +185,39 @@ export default function Home() {
       </section>
 
       <section className="section-pad border-b border-line bg-white/30">
-        <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-6 md:grid-cols-[0.85fr_1.15fr] lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-6 md:grid-cols-[0.72fr_1.28fr] lg:px-8">
           <div>
             <p className="eyebrow">Why this exists</p>
             <h2 className="mt-4 font-serif text-4xl font-black leading-tight sm:text-5xl">
               Built by a Canadian living in Portugal.
             </h2>
+            <div className="mt-6 max-w-64 overflow-hidden rounded-full border border-line bg-paper">
+              <Image
+                alt="Founder of Fix My Portugal Trip"
+                className="aspect-square h-full w-full object-cover"
+                height="512"
+                src="/founder.png"
+                width="512"
+              />
+            </div>
           </div>
           <div className="space-y-5 text-lg font-bold leading-8 text-muted">
             <p>
-              I look at Portugal trips from both sides: the North American habit
-              of trying to fit everything in, and the local reality that hills,
-              transit friction, check-in timing, restaurant hours, and day-trip
-              pacing do not care what Google Maps promised.
+              I built this because I kept seeing travelers plan Portugal like
+              it is a small checklist country: Lisbon, Sintra, Porto, Douro,
+              Algarve, all jammed into one week because the map makes it look possible.
             </p>
             <p>
-              The most expensive mistake is usually not a bad hotel. It is an
-              overpacked schedule built on optimism, screenshots, and no buffer.
-              This service is designed to catch that before you land.
+              Portugal rewards better pacing. Hills, train times, check-ins,
+              restaurant hours, luggage, heat, and day-trip friction matter more
+              than most first-time visitors expect. My job is to catch those
+              problems before you build the trip around them.
+            </p>
+            <p>
+              The Canadian/North American angle is not a rule about who can use
+              the service. It is the set of assumptions I am especially good at
+              spotting: overpacked routes, Google Maps optimism, rental car
+              friction, and days that only work if nothing goes wrong.
             </p>
           </div>
         </div>

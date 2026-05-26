@@ -103,7 +103,7 @@ export function IntakeForm() {
           rows={8}
           placeholder="Paste the draft day by day. Rough is fine."
         />
-        <Field label="Google Doc/link to itinerary optional" name="itineraryLink" type="url" />
+        <Field label="Google Doc/link to itinerary (optional)" name="itineraryLink" type="url" />
         <TextArea label="Cities/regions planned" name="citiesRegions" required rows={4} />
         <TextArea label="Accommodation booked?" name="accommodationBooked" rows={4} />
         <Select label="Flights booked?" name="flightsBooked" required options={["yes", "no"]} />
